@@ -8,7 +8,7 @@ function Header() {
       <div className="mx-auto py-6 flex items-center justify-between px-8 sm:px-12 lg:px-16">
        
         <div>
-          <img src="public/assets/logo.png" alt="AltezzAi Logo" className="h-12" />
+          <img src="public/assets/logo.png" onClick={() => (window.location.href = "/")} alt="AltezzAi Logo" className="h-12" />
         </div>
 
         
@@ -17,7 +17,7 @@ function Header() {
           <nav className="flex gap-8 text-base font-normal text-black">
             <a className="border-b-2 border-black pb-1 cursor-pointer">Home</a>
             <a className="cursor-pointer hover:opacity-70">About Us</a>
-            <a className="cursor-pointer hover:opacity-70">Services</a>
+            <a className="cursor-pointer hover:opacity-70" onClick={() => (window.location.href = "/services")}>Services</a>
             <a className="cursor-pointer hover:opacity-70">Our Work</a>
             <a className="cursor-pointer hover:opacity-70">Our Team</a>
             <a className="cursor-pointer hover:opacity-70">Our Product</a>
@@ -41,9 +41,9 @@ function Header() {
      
       {menuOpen && (
         <div className="md:hidden px-6 py-8 flex flex-col gap-6 border-t border-gray-100 bg-white text-base">
-          <a>Home</a>
+          <a onClick={() => (window.location.href = "/")}>Home</a>
           <a>About Us</a>
-          <a>Services</a>
+          <a onClick={() => (window.location.href = "/services")}>Services</a>
           <a>Our Work</a>
           <a>Our Team</a>
           <a>Our Product</a>
