@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import Hero from "./Hero";
+import Services from "./Services";
 
 function Landing() {
   return (
@@ -8,6 +9,7 @@ function Landing() {
 
       <main>
         <Hero />
+        <Services/>
       </main>
     </div>
   );
