@@ -15,10 +15,10 @@ function Header() {
         <div className="hidden md:flex items-center gap-8">
           {/* Navigation Menu */}
           <nav className="flex gap-8 text-base font-normal text-black">
-            <a className="border-b-2 border-black pb-1 cursor-pointer">Home</a>
+            <a className="border-b-2 border-black pb-1 cursor-pointer" onClick={() => (window.location.href = "/")} >Home</a>
             <a className="cursor-pointer hover:opacity-70">About Us</a>
             <a className="cursor-pointer hover:opacity-70" onClick={() => (window.location.href = "/services")}>Services</a>
-            <a className="cursor-pointer hover:opacity-70">Our Work</a>
+            <a className="cursor-pointer hover:opacity-70" onClick={() => (window.location.href = "/works")}>Our Work</a>
             <a className="cursor-pointer hover:opacity-70">Our Team</a>
             <a className="cursor-pointer hover:opacity-70">Our Product</a>
           </nav>
@@ -44,7 +44,7 @@ function Header() {
           <a onClick={() => (window.location.href = "/")}>Home</a>
           <a>About Us</a>
           <a onClick={() => (window.location.href = "/services")}>Services</a>
-          <a>Our Work</a>
+          <a onClick={() => (window.location.href = "/works")}>Our Work</a>
           <a>Our Team</a>
           <a>Our Product</a>
           <button className="mt-6 bg-black text-white py-3 rounded-full">
