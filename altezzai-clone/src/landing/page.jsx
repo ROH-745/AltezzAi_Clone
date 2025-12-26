@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Contact from "./Contact";
 import Hero from "./Hero";
@@ -15,7 +16,8 @@ function Landing() {
         <Services />
         <Works />
         <Team />
-        <Contact/>
+        <Contact />
+        <Footer/>
       </main>
     </div>
   );

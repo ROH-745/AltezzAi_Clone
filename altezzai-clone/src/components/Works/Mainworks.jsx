@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Mainworks() {
   const works = [
@@ -172,6 +173,8 @@ function Mainworks() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

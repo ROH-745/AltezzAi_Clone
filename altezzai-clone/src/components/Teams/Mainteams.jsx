@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Mainteams() {
   const teamMembers = [
@@ -143,6 +144,8 @@ function Mainteams() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

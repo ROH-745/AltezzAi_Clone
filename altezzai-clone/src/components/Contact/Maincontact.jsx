@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function Maincontact() {
   const handleEmailClick = () => {
@@ -12,7 +13,6 @@ function Maincontact() {
 
       <main className="py-6 lg:py-8">
         <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-3">
-          
           <h1
             className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-8 lg:mb-10"
             style={{ fontFamily: "Space Grotesk" }}
@@ -20,9 +20,7 @@ function Maincontact() {
             Contact Us
           </h1>
 
-          
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-center lg:items-start max-w-4xl mx-auto">
-            
             {/* IMAGE SECTION */}
             <div className="w-full lg:w-2/5 relative flex justify-center">
               <div className="relative max-w-xs lg:max-w-sm w-full">
@@ -32,7 +30,6 @@ function Maincontact() {
                   className="w-full h-auto rounded-3xl"
                 />
 
-                
                 <div className="absolute bottom-6 left-6 right-6 flex justify-center">
                   <button
                     onClick={handleEmailClick}
@@ -69,7 +66,6 @@ function Maincontact() {
                 </h3>
 
                 <form className="space-y-3 mt-4">
-
                   <div>
                     <input
                       type="text"
@@ -79,7 +75,6 @@ function Maincontact() {
                     />
                   </div>
 
-                  
                   <div>
                     <input
                       type="tel"
@@ -89,7 +84,6 @@ function Maincontact() {
                     />
                   </div>
 
-                  
                   <div>
                     <input
                       type="email"
@@ -99,7 +93,6 @@ function Maincontact() {
                     />
                   </div>
 
-                  
                   <div>
                     <textarea
                       placeholder="Message"
@@ -109,7 +102,6 @@ function Maincontact() {
                     ></textarea>
                   </div>
 
-                  
                   <button
                     type="submit"
                     className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-6 rounded-xl font-medium transition-colors duration-300"
@@ -123,6 +115,8 @@ function Maincontact() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
