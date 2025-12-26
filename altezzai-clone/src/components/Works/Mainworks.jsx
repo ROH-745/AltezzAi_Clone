@@ -92,18 +92,18 @@ function Mainworks() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main className="py-12 lg:py-16">
+      <main className="py-6 lg:py-5">
         <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-3">
           {/* Page Title */}
           <h1
-            className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-12 lg:mb-16"
+            className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-6 lg:mb-8"
             style={{ fontFamily: "Space Grotesk" }}
           >
             Our Works
           </h1>
 
           {/* Works Grid - 3 columns on desktop, 1 column on mobile */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 ">
             {works.map((work) => (
               <div
                 key={work.id}

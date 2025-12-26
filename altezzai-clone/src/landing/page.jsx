@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import Hero from "./Hero";
 import Services from "./Services";
+import Team from "./Team";
 import Works from "./Works";
 
 function Landing() {
@@ -12,6 +13,7 @@ function Landing() {
         <Hero />
         <Services />
         <Works />
+        <Team/>
       </main>
     </div>
   );

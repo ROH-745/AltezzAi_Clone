@@ -1,6 +1,7 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 function Header() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -17,9 +18,9 @@ function Header() {
           <nav className="flex gap-8 text-base font-normal text-black">
             <a className="border-b-2 border-black pb-1 cursor-pointer" onClick={() => (window.location.href = "/")} >Home</a>
             <a className="cursor-pointer hover:opacity-70">About Us</a>
-            <a className="cursor-pointer hover:opacity-70" onClick={() => (window.location.href = "/services")}>Services</a>
-            <a className="cursor-pointer hover:opacity-70" onClick={() => (window.location.href = "/works")}>Our Work</a>
-            <a className="cursor-pointer hover:opacity-70">Our Team</a>
+            <a className="cursor-pointer hover:opacity-70" onClick={() => navigate("/services")}>Services</a>
+            <a className="cursor-pointer hover:opacity-70" onClick={() => navigate("/works")}>Our Work</a>
+            <a className="cursor-pointer hover:opacity-70"onClick={() => navigate("/teams")} >Our Team</a>
             <a className="cursor-pointer hover:opacity-70">Our Product</a>
           </nav>
 
@@ -40,12 +41,12 @@ function Header() {
 
      
       {menuOpen && (
-        <div className="md:hidden px-6 py-8 flex flex-col gap-6 border-t border-gray-100 bg-white text-base">
+        <div className="md:hidden px-6 py-8 flex flex-col gap-6 border-t border-gray-100 bg-white text-base cursor-pointer">
           <a onClick={() => (window.location.href = "/")}>Home</a>
           <a>About Us</a>
-          <a onClick={() => (window.location.href = "/services")}>Services</a>
-          <a onClick={() => (window.location.href = "/works")}>Our Work</a>
-          <a>Our Team</a>
+          <a onClick={() => navigate("/services")}>Services</a>
+          <a onClick={() => navigate("/works")}>Our Work</a>
+          <a onClick={() => navigate("/teams")}>Our Team</a>
           <a>Our Product</a>
           <button className="mt-6 bg-black text-white py-3 rounded-full">
             Contact Us

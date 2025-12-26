@@ -64,11 +64,11 @@ function Mainservices() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <main className="py-12 lg:py-16">
+      <main className="py-6 lg:py-5">
         <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-3">
           {/* Page Title */}
           <h1
-            className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-12 lg:mb-16"
+            className="text-4xl lg:text-5xl font-medium text-gray-900 text-center mb-6 lg:mb-8"
             style={{ fontFamily: "Space Grotesk" }}
           >
             Our Services
