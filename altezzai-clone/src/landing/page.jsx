@@ -1,4 +1,5 @@
 import Header from "../components/Header/Header";
+import Contact from "./Contact";
 import Hero from "./Hero";
 import Services from "./Services";
 import Team from "./Team";
@@ -13,7 +14,8 @@ function Landing() {
         <Hero />
         <Services />
         <Works />
-        <Team/>
+        <Team />
+        <Contact/>
       </main>
     </div>
   );
