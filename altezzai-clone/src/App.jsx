@@ -4,12 +4,14 @@ import Mainservices from "./components/Services/Mainservices";
 import Mainworks from "./components/Works/Mainworks";
 import Mainteams from "./components/Teams/Mainteams";
 import Maincontact from "./components/Contact/Maincontact";
+import About from "./components/About/About";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services" element={<Mainservices />} />
         <Route path="/works" element={<Mainworks />} />
         <Route path="/teams" element={<Mainteams />} />

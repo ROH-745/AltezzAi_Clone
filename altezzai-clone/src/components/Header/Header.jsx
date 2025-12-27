@@ -6,6 +6,7 @@ function Header() {
 
   return (
     <header className="bg-white border-b border-gray-100">
+      {/* <header className="bg-white border-b border-gray-100 fixed top-0 left-0 right-0 z-50" > */}
       <div className="mx-auto py-6 flex items-center justify-between px-8 sm:px-12 lg:px-16">
         <div>
           <img
@@ -25,7 +26,12 @@ function Header() {
             >
               Home
             </a>
-            <a className="cursor-pointer hover:opacity-70">About Us</a>
+            <a
+              className="cursor-pointer hover:opacity-70"
+              onClick={() => navigate("/about")}
+            >
+              About Us
+            </a>
             <a
               className="cursor-pointer hover:opacity-70"
               onClick={() => navigate("/services")}
@@ -66,7 +72,7 @@ function Header() {
       {menuOpen && (
         <div className="md:hidden px-6 py-8 flex flex-col gap-6 border-t border-gray-100 bg-white text-base cursor-pointer">
           <a onClick={() => (window.location.href = "/")}>Home</a>
-          <a>About Us</a>
+          <a onClick={() => navigate("/about")}>About Us</a>
           <a onClick={() => navigate("/services")}>Services</a>
           <a onClick={() => navigate("/works")}>Our Work</a>
           <a onClick={() => navigate("/teams")}>Our Team</a>
