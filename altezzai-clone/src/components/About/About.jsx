@@ -12,7 +12,7 @@ function About() {
         <img
           src="/assets/About/img1.webp"
           alt="About Altezzai"
-          className="w-48 h-auto object-cover"
+          className="w-32 lg:w-48 h-auto object-cover"
         />
       </div>
 
@@ -39,7 +39,8 @@ function About() {
 
           {/* Content Section */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mt-10 items-start">
-            <div className="relative  overflow-hidden mt-8 w-full max-w-lg mx-auto lg:max-w-lg [filter:drop-shadow(10px_10px_0_black)_drop-shadow(0_0_0_black)]">
+            {/* Second Image */}
+            <div className="relative  overflow-hidden mt-8 w-full max-w-sm mx-auto lg:max-w-lg [filter:drop-shadow(10px_10px_0_black)_drop-shadow(0_0_0_black)]">
               <img
                 src="/assets/About/img2.webp"
                 alt="Digital Solutions"
