@@ -135,7 +135,7 @@ function Footer() {
           {/* Navigation Links */}
           <div className="flex flex-col gap-0 text-center">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/about")}
               className="text-xs hover:text-teal-400 transition-colors"
               style={{ fontFamily: "Space Grotesk" }}
             >

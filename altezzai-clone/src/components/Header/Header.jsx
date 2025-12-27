@@ -1,8 +1,16 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Function to check if current path matches the link
+  const isActive = (path) => {
+    if (path === "/" && location.pathname === "/") return true;
+    if (path !== "/" && location.pathname === path) return true;
+    return false;
+  };
 
   return (
     <header className="bg-white border-b border-gray-100">
@@ -21,31 +29,51 @@ function Header() {
           {/* Navigation Menu */}
           <nav className="flex gap-8 text-base font-normal text-black">
             <a
-              className="border-b-2 border-black pb-1 cursor-pointer"
+              className={`cursor-pointer ${
+                isActive("/")
+                  ? "border-b-2 border-black pb-1"
+                  : "hover:opacity-70"
+              }`}
               onClick={() => (window.location.href = "/")}
             >
               Home
             </a>
             <a
-              className="cursor-pointer hover:opacity-70"
+              className={`cursor-pointer ${
+                isActive("/about")
+                  ? "border-b-2 border-black pb-1"
+                  : "hover:opacity-70"
+              }`}
               onClick={() => navigate("/about")}
             >
               About Us
             </a>
             <a
-              className="cursor-pointer hover:opacity-70"
+              className={`cursor-pointer ${
+                isActive("/services")
+                  ? "border-b-2 border-black pb-1"
+                  : "hover:opacity-70"
+              }`}
               onClick={() => navigate("/services")}
             >
               Services
             </a>
             <a
-              className="cursor-pointer hover:opacity-70"
+              className={`cursor-pointer ${
+                isActive("/works")
+                  ? "border-b-2 border-black pb-1"
+                  : "hover:opacity-70"
+              }`}
               onClick={() => navigate("/works")}
             >
               Our Work
             </a>
             <a
-              className="cursor-pointer hover:opacity-70"
+              className={`cursor-pointer ${
+                isActive("/teams")
+                  ? "border-b-2 border-black pb-1"
+                  : "hover:opacity-70"
+              }`}
               onClick={() => navigate("/teams")}
             >
               Our Team
