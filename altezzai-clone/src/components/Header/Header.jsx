@@ -6,7 +6,6 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productDropdownOpen, setProductDropdownOpen] = useState(false);
 
-  
   const isActive = (path) => {
     if (path === "/" && location.pathname === "/") return true;
     if (path !== "/" && location.pathname === path) return true;
@@ -15,7 +14,7 @@ function Header() {
 
   return (
     <header className="bg-white border-b border-gray-100">
-         {/* <header className="bg-white border-b border-gray-100 fixed top-0 left-0 right-0 z-50" > */}
+      {/* <header className="bg-white border-b border-gray-100 fixed top-0 left-0 right-0 z-50" > */}
       <div className="mx-auto py-6 flex items-center justify-between px-8 sm:px-12 lg:px-16">
         <div>
           <img
@@ -88,21 +87,24 @@ function Header() {
 
               {/* Product Dropdown */}
               {productDropdownOpen && (
-                <div className="absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg py-2 px-4 w-32 z-50">
+                <div className="absolute top-full -left-5 bg-white border border-gray-200 rounded-lg shadow-lg py-2 px-4 w-32 z-50">
                   <div className="space-y-2">
-                    <a onClick={() => navigate("/product")}
+                    <a
+                      onClick={() => navigate("/product")}
                       className="block text-gray-700 hover:text-cyan-500 cursor-pointer text-sm"
                       style={{ fontFamily: "Space Grotesk" }}
                     >
                       Cluesinsight
                     </a>
-                    <a onClick={() => navigate("/product")}
+                    <a
+                      onClick={() => navigate("/product")}
                       className="block text-gray-700 hover:text-cyan-500 cursor-pointer text-sm"
                       style={{ fontFamily: "Space Grotesk" }}
                     >
                       Smart School
                     </a>
-                    <a onClick={() => navigate("/product")}
+                    <a
+                      onClick={() => navigate("/product")}
                       className="block text-gray-700 hover:text-cyan-500 cursor-pointer text-sm"
                       style={{ fontFamily: "Space Grotesk" }}
                     >
