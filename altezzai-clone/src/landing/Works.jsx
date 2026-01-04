@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Works() {
+  const [flippedCards, setFlippedCards] = useState({});
+
+  const handleImageClick = (workId) => {
+    setFlippedCards((prev) => ({
+      ...prev,
+      [workId]: !prev[workId],
+    }));
+  };
   const works = [
     {
       id: 1,
@@ -60,17 +68,31 @@ function Works() {
               }`}
             >
               {/* Images Container */}
-              <div className="mb-8 relative h-48 lg:h-56">
-                {/* First Image - Background */}
-                <div className="absolute inset-0">
+              <div
+                className="mb-8 relative h-48 lg:h-56"
+                onMouseEnter={() => handleImageClick(work.id)}
+                onMouseLeave={() => handleImageClick(work.id)}
+              >
+                {/* First Image - Background (initially behind) */}
+                <div
+                  className={`absolute inset-0 transition-all duration-500 ${
+                    flippedCards[work.id] ? "z-20 scale-105" : "z-10 scale-100"
+                  }`}
+                >
                   <img
                     src={work.images[0]}
                     alt={`${work.title} Screenshot 1`}
                     className="w-full h-full object-cover rounded-2xl shadow-lg"
                   />
                 </div>
-                {/* Second Image - Overlapping in center */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/5 h-3/5">
+                {/* Second Image - Overlapping in center (initially on top) */}
+                <div
+                  className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/5 h-3/5 transition-all duration-500 ${
+                    flippedCards[work.id]
+                      ? "z-10 scale-90 opacity-70"
+                      : "z-20 scale-100"
+                  }`}
+                >
                   <img
                     src={work.images[1]}
                     alt={`${work.title} Screenshot 2`}
