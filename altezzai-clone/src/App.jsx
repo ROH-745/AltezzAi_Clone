@@ -5,6 +5,7 @@ import Mainworks from "./components/Works/Mainworks";
 import Mainteams from "./components/Teams/Mainteams";
 import Maincontact from "./components/Contact/Maincontact";
 import About from "./components/About/About";
+import Product from "./landing/Product";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/works" element={<Mainworks />} />
         <Route path="/teams" element={<Mainteams />} />
         <Route path="/contact" element={<Maincontact />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
     </Router>
   );

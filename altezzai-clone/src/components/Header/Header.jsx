@@ -4,8 +4,9 @@ function Header() {
   const navigate = useNavigate();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [productDropdownOpen, setProductDropdownOpen] = useState(false);
 
-  // Function to check if current path matches the link
+  
   const isActive = (path) => {
     if (path === "/" && location.pathname === "/") return true;
     if (path !== "/" && location.pathname === path) return true;
@@ -14,7 +15,7 @@ function Header() {
 
   return (
     <header className="bg-white border-b border-gray-100">
-      {/* <header className="bg-white border-b border-gray-100 fixed top-0 left-0 right-0 z-50" > */}
+         {/* <header className="bg-white border-b border-gray-100 fixed top-0 left-0 right-0 z-50" > */}
       <div className="mx-auto py-6 flex items-center justify-between px-8 sm:px-12 lg:px-16">
         <div>
           <img
@@ -62,7 +63,7 @@ function Header() {
               className={`cursor-pointer ${
                 isActive("/works")
                   ? "border-b-2 border-black pb-1"
-                  : "hover:opacity-70"
+                  : "hover:opacity-70 "
               }`}
               onClick={() => navigate("/works")}
             >
@@ -78,7 +79,39 @@ function Header() {
             >
               Our Team
             </a>
-            <a className="cursor-pointer hover:opacity-70">Our Product</a>
+            <div
+              className="relative"
+              onMouseEnter={() => setProductDropdownOpen(true)}
+              onMouseLeave={() => setProductDropdownOpen(false)}
+            >
+              <a className="cursor-pointer hover:opacity-70">Our Product</a>
+
+              {/* Product Dropdown */}
+              {productDropdownOpen && (
+                <div className="absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg py-2 px-4 w-32 z-50">
+                  <div className="space-y-2">
+                    <a onClick={() => navigate("/product")}
+                      className="block text-gray-700 hover:text-cyan-500 cursor-pointer text-sm"
+                      style={{ fontFamily: "Space Grotesk" }}
+                    >
+                      Cluesinsight
+                    </a>
+                    <a onClick={() => navigate("/product")}
+                      className="block text-gray-700 hover:text-cyan-500 cursor-pointer text-sm"
+                      style={{ fontFamily: "Space Grotesk" }}
+                    >
+                      Smart School
+                    </a>
+                    <a onClick={() => navigate("/product")}
+                      className="block text-gray-700 hover:text-cyan-500 cursor-pointer text-sm"
+                      style={{ fontFamily: "Space Grotesk" }}
+                    >
+                      Shopynker
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           <button
