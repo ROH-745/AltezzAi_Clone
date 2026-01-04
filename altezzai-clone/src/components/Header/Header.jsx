@@ -32,7 +32,7 @@ function Header() {
               className={`cursor-pointer ${
                 isActive("/")
                   ? "border-b-2 border-black pb-1"
-                  : "hover:opacity-70"
+                  : "hover:text-blue-500"
               }`}
               onClick={() => (window.location.href = "/")}
             >
@@ -42,7 +42,7 @@ function Header() {
               className={`cursor-pointer ${
                 isActive("/about")
                   ? "border-b-2 border-black pb-1"
-                  : "hover:opacity-70"
+                  : "hover:text-blue-500"
               }`}
               onClick={() => navigate("/about")}
             >
@@ -52,7 +52,7 @@ function Header() {
               className={`cursor-pointer ${
                 isActive("/services")
                   ? "border-b-2 border-black pb-1"
-                  : "hover:opacity-70"
+                  : "hover:text-blue-500"
               }`}
               onClick={() => navigate("/services")}
             >
@@ -62,7 +62,7 @@ function Header() {
               className={`cursor-pointer ${
                 isActive("/works")
                   ? "border-b-2 border-black pb-1"
-                  : "hover:opacity-70 "
+                  : "hover:text-blue-500"
               }`}
               onClick={() => navigate("/works")}
             >
@@ -72,7 +72,7 @@ function Header() {
               className={`cursor-pointer ${
                 isActive("/teams")
                   ? "border-b-2 border-black pb-1"
-                  : "hover:opacity-70"
+                  : "hover:text-blue-500"
               }`}
               onClick={() => navigate("/teams")}
             >
@@ -83,7 +83,7 @@ function Header() {
               onMouseEnter={() => setProductDropdownOpen(true)}
               onMouseLeave={() => setProductDropdownOpen(false)}
             >
-              <a className="cursor-pointer hover:opacity-70">Our Product</a>
+              <a className="cursor-pointer hover:text-blue-500">Our Product</a>
 
               {/* Product Dropdown */}
               {productDropdownOpen && (
@@ -118,7 +118,7 @@ function Header() {
 
           <button
             onClick={() => navigate("/contact")}
-            className="bg-black text-white px-6 py-3 rounded-full text-base hover:bg-gray-800 transition"
+            className="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 hover:scale-110 transition-all duration-200"
           >
             Contact Us
           </button>
